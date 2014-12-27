@@ -90,13 +90,13 @@
         </member>
         <member name="M:YourLastAboutDialog.Commands.RelayCommand`1.#ctor(System.Action{`0})">
             <summary>
-            Initializes a new instance of the <see cref="T:YourLastAboutDialog.Commands.RelayCommand"/> class.
+            Initializes a new instance of the <see cref="T:YourLastAboutDialog.Commands.RelayCommand`1"/> class.
             </summary>
             <param name="commandAction">The action to relay the command to.</param>
         </member>
         <member name="M:YourLastAboutDialog.Commands.RelayCommand`1.#ctor(System.Action{`0},System.Func{`0,System.Boolean})">
             <summary>
-            Initializes a new instance of the <see cref="T:YourLastAboutDialog.Commands.RelayCommand"/> class.
+            Initializes a new instance of the <see cref="T:YourLastAboutDialog.Commands.RelayCommand`1"/> class.
             </summary>
             <param name="commandAction">The action to relay the command to.</param>
             <param name="canExecuteFunc">The function to execute to determine whether the command can be executed or not.</param>
@@ -108,13 +108,18 @@
         </member>
         <member name="M:YourLastAboutDialog.Commands.RelayCommand`1.CanExecute(System.Object)">
             <summary>
-            Determines whether the command can be executed or not.
+            Gets a value indicating whether the command can be executed or not.
             </summary>
+            <param name="parameter">The data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
         </member>
         <member name="M:YourLastAboutDialog.Commands.RelayCommand`1.Execute(System.Object)">
             <summary>
             Executes the command with the given parameter.
             </summary>
+            <param name="parameter">The data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
         </member>
         <member name="E:YourLastAboutDialog.Commands.RelayCommand`1.CanExecuteChanged">
             <summary>
@@ -286,24 +291,24 @@
         </member>
         <member name="P:YourLastAboutDialog.Models.ItemData.Title">
             <summary>
-            The title of the pivot item.
+            Gets or sets the title of the pivot item.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.ItemData.Uri">
             <summary>
-            The uri where the content of the page should be downloaded from.
+            Gets or sets the uri where the content of the page should be downloaded from.
             If this is <c>null</c>, the <see cref="P:YourLastAboutDialog.Models.ItemData.OfflineContent"/> is used.
             </summary>
         </member>
-        <member name="P:YourLastAboutDialog.Models.ItemData.Type">
+        <member name="P:YourLastAboutDialog.Models.ItemData.ItemType">
             <summary>
-            The type of the content, used for the formatting/preparation of the page.
+            Gets or sets the type of the content, used for the formatting/preparation of the page.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.ItemData.OfflineContent">
             <summary>
-            The alternate content that is used when downloading the content from the remote
-            <c>Uri</c> fails, or if no <c>Uri</c> is given at all. The <see cref="P:YourLastAboutDialog.Models.ItemData.Type"/> property
+            Gets or sets the alternate content that is used when downloading the content from the remote
+            <c>Uri</c> fails, or if no <c>Uri</c> is given at all. The <see cref="P:YourLastAboutDialog.Models.ItemData.ItemType"/> property
             is respected for this content too.
             </summary>
         </member>
@@ -329,22 +334,22 @@
         </member>
         <member name="P:YourLastAboutDialog.Models.LinkData.Empty">
             <summary>
-            An empty link data object.
+            Gets an empty link data object.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.LinkData.NavigateUri">
             <summary>
-            The uri used as navigation target.
+            Gets or sets the uri used as navigation target.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.LinkData.Content">
             <summary>
-            The content used as display.
+            Gets or sets the content used as display.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.LinkData.Label">
             <summary>
-            An additional label that is not part of the hyperlink button.
+            Gets or sets an additional label that is not part of the hyperlink button.
             </summary>
         </member>
         <member name="T:YourLastAboutDialog.Models.MainItemData">
@@ -354,42 +359,42 @@
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.Title">
             <summary>
-            The title of the main item.
+            Gets or sets the title of the main item.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppAuthorLabel">
             <summary>
-            The label that should be used for the author. Default is "by".
+            Gets or sets the label that should be used for the author. Default is "by".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppDescriptionLabel">
             <summary>
-            The label that should be used for the description. Default is "Description:".
+            Gets or sets the label that should be used for the description. Default is "Description:".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppPublisherLabel">
             <summary>
-            The label that should be used for the publisher. Default is "Publisher:".
+            Gets or sets the label that should be used for the publisher. Default is "Publisher:".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppVersionLabel">
             <summary>
-            The label that should be used for the version. Default is "Version:".
+            Gets or sets the label that should be used for the version. Default is "Version:".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppAdditionalNotesLabel">
             <summary>
-            The label that should be used for the additional notes. Default is "Additional notes:".
+            Gets or sets the label that should be used for the additional notes. Default is "Additional notes:".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppReviewButtonContent">
             <summary>
-            The content that should be used for the review button. Default is "Review this app!".
+            Gets or sets the content that should be used for the review button. Default is "Review this app!".
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.Models.MainItemData.AppBuyButtonContent">
             <summary>
-            The content that should be used for the buy button. Default is "Buy this app!".
+            Gets or sets the content that should be used for the buy button. Default is "Buy this app!".
             </summary>
         </member>
         <member name="T:YourLastAboutDialog.ViewModels.AboutViewModel">
@@ -480,67 +485,67 @@
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.Items">
             <summary>
-            The list of items that should be shown.
+            Gets the list of items that should be shown.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.Links">
             <summary>
-            The links that should be added to the list of links on the main pivot item.
+            Gets the links that should be added to the list of links on the main pivot item.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationDescription">
             <summary>
-            The description of the application.
+            Gets or sets the description of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationPublisher">
             <summary>
-            The publisher of the application.
+            Gets or sets the publisher of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationAuthor">
             <summary>
-            The author of the application.
+            Gets or sets the author of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationVersion">
             <summary>
-            The version of the application.
+            Gets or sets the version of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationTitle">
             <summary>
-            The title of the application.
+            Gets or sets the title of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationTitleUpper">
             <summary>
-            The application title converted to upper case.
+            Gets or sets the application title converted to upper case.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationProductId">
             <summary>
-            The product ID of the application.
+            Gets or sets the product ID of the application.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ApplicationFullVersionProductId">
             <summary>
-            The alternate product ID of the application's full version.
+            Gets or sets the alternate product ID of the application's full version.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.AdditionalNotes">
             <summary>
-            Additional notes that should be displayed on the main item.
+            Gets or sets the additional notes that should be displayed on the main item.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.ReviewCommand">
             <summary>
-            Wraps the review application operation.
+            Gets the command that wraps the review application operation.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.BuyCommand">
             <summary>
-            Wraps the buy application operation.
+            Gets the command that wraps the buy application operation.
             </summary>
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.AboutViewModel.BuyOptionVisibility">
@@ -561,7 +566,7 @@
         </member>
         <member name="P:YourLastAboutDialog.ViewModels.GenericItemViewModel.Content">
             <summary>
-            The content of the pivot item. 
+            Gets or sets the content of the pivot item. 
             Usually this will be some visual element, but it can also be pure text.
             </summary>
         </member>

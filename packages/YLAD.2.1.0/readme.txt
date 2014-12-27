@@ -35,5 +35,5 @@ If you think YLAD is useful, please leave a vote or tweet about it - thanks :)
 
 --
 Peter Kuhn ("Mister Goodcat")
-Twitter: @Mister_Goodcat (http://twitter.com/#!/Mister_Goodcat)
+Twitter: @Mister_Goodcat (https://twitter.com/Mister_Goodcat)
 Blog: http://www.pitorque.de/MisterGoodcat
